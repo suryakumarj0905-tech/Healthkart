@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediCare+ | Online Pharmacy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ TOP BANNER ============ -->
+  <div class="top-banner">
+    Free delivery on orders above Rs.499 | Use code MEDICARE10 for 10% off
+    <button onclick="document.querySelector('.top-banner').style.display='none'">X</button>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar">
+    <div class="logo">MediCare<span>+</span></div>
+
+    <ul class="nav-links">
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="Uploadrx.html">Upload Rx</a></li>
+      <li><a href="#packs">Health Packs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+        &#128722;<span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a href="#">Sign In</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <div class="hero">
+    <h1>Your Health, Delivered to Your Door</h1>
+    <p>Order medicines, upload prescriptions, and manage your family's health, all in one place. Licensed pharmacists verify every order.</p>
+    <div class="hero-buttons">
+      <a href="medicines.html" class="btn-primary">Shop Medicines</a>
+      <a href="Uploadrx.html" class="btn-secondary">Upload Prescription</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <h3>50K+</h3>
+        <p>Happy Patients</p>
+      </div>
+      <div>
+        <h3>8,000+</h3>
+        <p>Medicines</p>
+      </div>
+      <div>
+        <h3>4.9 Star</h3>
+        <p>App Rating</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TRUST BAR ============ -->
+  <div class="trust-bar">
+    <p>Licensed Pharmacy - Reg No. AP/2019/1234</p>
+    <p>Same Day Delivery in Chennai</p>
+    <p>100% Genuine Medicines</p>
+    <p>Easy Returns and Refunds</p>
+  </div>
+
+  <!-- ============ SHOP BY CATEGORY ============ -->
+  <div class="section">
+    <div class="section-title">
+      <h2>Shop by Category</h2>
+      <p>Browse medicines across all health categories</p>
+    </div>
+    <div class="category-row">
+      <a href="medicines.html" class="category-card">
+        <div class="category-icon">&#9829;</div>
+        <h4>Heart Health</h4>
+        <span>286 items</span>
+      </a>
+      <a href="medicines.html" class="category-card">
+        <div class="category-icon">&#128138;</div>
+        <h4>Diabetes</h4>
+        <span>412 items</span>
+      </a>
+      <a href="medicines.html" class="category-card">
+        <div class="category-icon">&#128138;</div>
+        <h4>Pain Relief</h4>
+        <span>198 items</span>
+      </a>
+      <a href="medicines.html" class="category-card">
+        <div class="category-icon">&#128137;</div>
+        <h4>Antibiotics</h4>
+        <span>143 items</span>
+      </a>
+      <a href="medicines.html" class="category-card">
+        <div class="category-icon">&#127818;</div>
+        <h4>Vitamins</h4>
+        <span>320 items</span>
+      </a>
+      <a href="medicines.html" class="category-card">
+        <div class="category-icon">&#128737;</div>
+        <h4>Baby Care</h4>
+        <span>167 items</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ FEATURED MEDICINES (preview only, full catalog is on medicines.html) ============ -->
+  <div class="section">
+    <div class="section-title">
+      <h2>Featured Medicines</h2>
+      <p>Most ordered this week</p>
+    </div>
+    <div class="product-row">
+
+      <div class="product-card" data-name="Metformin 500mg" data-category="prescription diabetic">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-rx">Rx</span>
+        </div>
+        <div class="product-info">
+          <h4>Metformin 500mg</h4>
+          <div class="mfr">Sun Pharma - Strip of 30</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8 (2.1k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.48</div>
+            <button class="add-btn" data-name="Metformin 500mg" data-price="48">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Dolo 650" data-category="otc">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-otc">OTC</span>
+        </div>
+        <div class="product-info">
+          <h4>Dolo 650</h4>
+          <div class="mfr">Micro Labs - Strip of 15</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9 (8.4k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.31</div>
+            <button class="add-btn" data-name="Dolo 650" data-price="31">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Azithromycin 500mg" data-category="generic prescription">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-generic">Generic</span>
+        </div>
+        <div class="product-info">
+          <h4>Azithromycin 500mg</h4>
+          <div class="mfr">Cipla - Strip of 5</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.6 (1.2k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.78</div>
+            <button class="add-btn" data-name="Azithromycin 500mg" data-price="78">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Vitamin D3 60K IU" data-category="otc vitamins">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-otc">OTC</span>
+        </div>
+        <div class="product-info">
+          <h4>Vitamin D3 60K IU</h4>
+          <div class="mfr">Abbott - Pack of 4</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.7 (3.6k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.120</div>
+            <button class="add-btn" data-name="Vitamin D3 60K IU" data-price="120">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="view-all-wrap">
+      <a href="medicines.html">View All Medicines</a>
+    </div>
+  </div>
+
+  <!-- ============ CHRONIC DISEASE PACKS ============ -->
+  <div class="section" id="packs">
+    <div class="section-title">
+      <h2>Chronic Disease Packs</h2>
+      <p>Monthly bundles for ongoing conditions, save up to 25%</p>
+    </div>
+    <div class="pack-row">
+      <div class="pack-card">
+        <h3>Diabetes Pack</h3>
+        <p>30 day supply</p>
+        <div class="pack-items">
+          Metformin 500mg<br>
+          Glimepiride 1mg<br>
+          Vitamin B12<br>
+          Glucometer Strips
+        </div>
+        <div class="pack-price">Rs.899 <span>/ month</span></div>
+      </div>
+
+      <div class="pack-card">
+        <h3>Hypertension Pack</h3>
+        <p>30 day supply</p>
+        <div class="pack-items">
+          Amlodipine 5mg<br>
+          Telmisartan 40mg<br>
+          Aspirin 75mg<br>
+          BP Log Book
+        </div>
+        <div class="pack-price">Rs.749 <span>/ month</span></div>
+      </div>
+
+      <div class="pack-card">
+        <h3>Thyroid Pack</h3>
+        <p>30 day supply</p>
+        <div class="pack-items">
+          Levothyroxine 50mcg<br>
+          Calcium + D3<br>
+          Multivitamin<br>
+          Test Reminder
+        </div>
+        <div class="pack-price">Rs.620 <span>/ month</span></div>
+      </div>
+
+      <div class="pack-card">
+        <h3>Heart Care Pack</h3>
+        <p>30 day supply</p>
+        <div class="pack-items">
+          Atorvastatin 10mg<br>
+          Clopidogrel 75mg<br>
+          Aspirin 75mg<br>
+          Omega-3 1000mg
+        </div>
+        <div class="pack-price">Rs.980 <span>/ month</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FEATURES ============ -->
+  <div class="section" id="features">
+    <div class="section-title">
+      <h2>Why MediCare+ ?</h2>
+      <p>Built for patients who take their health seriously</p>
+    </div>
+    <div class="feature-row">
+      <div class="feature-card">
+        <div class="feature-icon">&#128196;</div>
+        <h3>Prescription OCR</h3>
+        <p>Upload any prescription image, our system extracts all medicines automatically and flags unreadable items for manual review.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9888;</div>
+        <h3>Drug Interaction Checker</h3>
+        <p>Real time alerts if two medicines in your cart have known interactions, with severity level and pharmacist notes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#8987;</div>
+        <h3>Refill Reminders</h3>
+        <p>Set auto reminders for recurring medicines. Get a WhatsApp or SMS alert 3 days before you run out.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128222;</div>
+        <h3>Pharmacist Chat</h3>
+        <p>Chat live with a licensed pharmacist anytime between 8am to 10pm for prescription queries and dosage guidance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#10052;</div>
+        <h3>Cold Chain Tracking</h3>
+        <p>Temperature sensitive medicines are tracked end to end. You get a temperature log with every order.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128179;</div>
+        <h3>Insurance Billing</h3>
+        <p>Partnered with major insurers. Submit claims directly, we handle the paperwork, you pay only your copay.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <div class="section">
+    <div class="section-title">
+      <h2>What Patients Say</h2>
+      <p>50,000+ orders delivered across Tamil Nadu</p>
+    </div>
+    <div class="testimonial-row">
+      <div class="testimonial-card">
+        <div class="testi-header">
+          <div class="avatar">RK</div>
+          <div>
+            <h4>Ramesh Kumar</h4>
+            <span>Chennai, Adyar</span>
+          </div>
+        </div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-text">"The drug interaction checker flagged a combination my doctor prescribed. The pharmacist called me and helped sort it out."</p>
+        <div class="verified">Verified Purchase</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-header">
+          <div class="avatar">PS</div>
+          <div>
+            <h4>Priya Subramanian</h4>
+            <span>Chennai, Anna Nagar</span>
+          </div>
+        </div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-text">"Managing my mother's diabetes is so much easier now. The Diabetes Pack auto refills monthly."</p>
+        <div class="verified">Verified Purchase</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-header">
+          <div class="avatar">AV</div>
+          <div>
+            <h4>Arjun Venkatesh</h4>
+            <span>Coimbatore</span>
+          </div>
+        </div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p class="testi-text">"Uploaded my prescription, got a callback in 20 minutes, medicines delivered by evening."</p>
+        <div class="verified">Verified Purchase</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contact">
+    <div class="footer-row">
+      <div class="footer-col footer-brand">
+        <div class="logo" style="color:#ffffff;">MediCare<span style="color:#00c896;">+</span></div>
+        <p>Your trusted online pharmacy. Licensed, verified, and dedicated to making healthcare accessible to every Indian family.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="medicines.html">Order Medicines</a></li>
+          <li><a href="Uploadrx.html">Upload Prescription</a></li>
+          <li><a href="home.html#packs">Chronic Disease Packs</a></li>
+          <li><a href="home.html#features">Pharmacist Chat</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Pharmacist Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="tel:+914400000000">+91 44 0000 0000</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MediCare+ Pvt. Ltd. All rights reserved. Reg. No. AP/2019/1234</p>
+    </div>
+  </footer>
+
+  <!-- ============ CART DRAWER (shared on every page) ============ -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">Rs.0</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

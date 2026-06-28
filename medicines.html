@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicines | MediCare+</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ TOP BANNER ============ -->
+  <div class="top-banner">
+    Free delivery on orders above Rs.499 | Use code MEDICARE10 for 10% off
+    <button onclick="document.querySelector('.top-banner').style.display='none'">X</button>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar">
+    <div class="logo">MediCare<span>+</span></div>
+
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="medicines.html" class="active">Medicines</a></li>
+      <li><a href="Uploadrx.html">Upload Rx</a></li>
+      <li><a href="home.html#packs">Health Packs</a></li>
+      <li><a href="home.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+        &#128722;<span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a href="#">Sign In</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <div class="page-header">
+    <h1>Order Medicines Online</h1>
+    <p>Search, filter, and add medicines to your cart in a few taps</p>
+  </div>
+
+  <!-- ============ SEARCH + FILTERS ============ -->
+  <div class="section">
+    <div class="search-box">
+      <h2>Search 8,000+ Medicines</h2>
+      <p>Find by medicine name, salt, or brand</p>
+      <div class="search-row">
+        <input type="text" id="searchInput" placeholder="Search e.g. Paracetamol, Dolo 650...">
+        <button id="searchBtn">Search</button>
+      </div>
+      <div class="filter-tags">
+        <div class="tag active" data-category="all">All</div>
+        <div class="tag" data-category="prescription">Prescription</div>
+        <div class="tag" data-category="otc">OTC</div>
+        <div class="tag" data-category="generic">Generic</div>
+        <div class="tag" data-category="vitamins">Vitamins</div>
+        <div class="tag" data-category="diabetic">Diabetic Care</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FULL MEDICINE CATALOG ============ -->
+  <div class="section">
+    <div class="section-title">
+      <h2>All Medicines</h2>
+      <p>10 of 8,000+ medicines shown for this demo catalog</p>
+    </div>
+
+    <div class="product-row">
+
+      <div class="product-card" data-name="Metformin 500mg" data-category="prescription diabetic">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-rx">Rx</span>
+        </div>
+        <div class="product-info">
+          <h4>Metformin 500mg</h4>
+          <div class="mfr">Sun Pharma - Strip of 30</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8 (2.1k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.48</div>
+            <button class="add-btn" data-name="Metformin 500mg" data-price="48">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Dolo 650" data-category="otc">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-otc">OTC</span>
+        </div>
+        <div class="product-info">
+          <h4>Dolo 650</h4>
+          <div class="mfr">Micro Labs - Strip of 15</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9 (8.4k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.31</div>
+            <button class="add-btn" data-name="Dolo 650" data-price="31">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Azithromycin 500mg" data-category="generic prescription">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-generic">Generic</span>
+        </div>
+        <div class="product-info">
+          <h4>Azithromycin 500mg</h4>
+          <div class="mfr">Cipla - Strip of 5</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.6 (1.2k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.78</div>
+            <button class="add-btn" data-name="Azithromycin 500mg" data-price="78">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Vitamin D3 60K IU" data-category="otc vitamins">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-otc">OTC</span>
+        </div>
+        <div class="product-info">
+          <h4>Vitamin D3 60K IU</h4>
+          <div class="mfr">Abbott - Pack of 4</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.7 (3.6k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.120</div>
+            <button class="add-btn" data-name="Vitamin D3 60K IU" data-price="120">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Crocin Advance 500mg" data-category="otc">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-otc">OTC</span>
+        </div>
+        <div class="product-info">
+          <h4>Crocin Advance 500mg</h4>
+          <div class="mfr">GSK - Strip of 15</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.5 (5.3k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.28</div>
+            <button class="add-btn" data-name="Crocin Advance 500mg" data-price="28">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Telmisartan 40mg" data-category="prescription">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-rx">Rx</span>
+        </div>
+        <div class="product-info">
+          <h4>Telmisartan 40mg</h4>
+          <div class="mfr">Aristo Pharma - Strip of 15</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.7 (1.8k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.65</div>
+            <button class="add-btn" data-name="Telmisartan 40mg" data-price="65">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Insulin Glargine" data-category="prescription diabetic">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-rx">Rx</span>
+        </div>
+        <div class="product-info">
+          <h4>Insulin Glargine</h4>
+          <div class="mfr">Sanofi - 1 Pen, 3ml</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8 (960)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.410</div>
+            <button class="add-btn" data-name="Insulin Glargine" data-price="410">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Multivitamin Tablets" data-category="otc vitamins">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-otc">OTC</span>
+        </div>
+        <div class="product-info">
+          <h4>Multivitamin Tablets</h4>
+          <div class="mfr">HealthVit - Bottle of 60</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.4 (2.7k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.299</div>
+            <button class="add-btn" data-name="Multivitamin Tablets" data-price="299">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Cetirizine 10mg" data-category="generic otc">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-generic">Generic</span>
+        </div>
+        <div class="product-info">
+          <h4>Cetirizine 10mg</h4>
+          <div class="mfr">Dr Reddy's - Strip of 10</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.6 (4.1k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.18</div>
+            <button class="add-btn" data-name="Cetirizine 10mg" data-price="18">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-name="Calcium + D3 Tablets" data-category="otc vitamins">
+        <div class="product-img">
+          &#128138;
+          <span class="product-badge badge-otc">OTC</span>
+        </div>
+        <div class="product-info">
+          <h4>Calcium + D3 Tablets</h4>
+          <div class="mfr">Zydus - Strip of 15</div>
+          <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.5 (1.9k)</div>
+          <div class="product-footer">
+            <div class="product-price">Rs.55</div>
+            <button class="add-btn" data-name="Calcium + D3 Tablets" data-price="55">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="no-results" id="noResults">No medicines match your search. Try a different name or filter.</p>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contact">
+    <div class="footer-row">
+      <div class="footer-col footer-brand">
+        <div class="logo" style="color:#ffffff;">MediCare<span style="color:#00c896;">+</span></div>
+        <p>Your trusted online pharmacy. Licensed, verified, and dedicated to making healthcare accessible to every Indian family.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="medicines.html">Order Medicines</a></li>
+          <li><a href="Uploadrx.html">Upload Prescription</a></li>
+          <li><a href="home.html#packs">Chronic Disease Packs</a></li>
+          <li><a href="home.html#features">Pharmacist Chat</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Pharmacist Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="tel:+914400000000">+91 44 0000 0000</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MediCare+ Pvt. Ltd. All rights reserved. Reg. No. AP/2019/1234</p>
+    </div>
+  </footer>
+
+  <!-- ============ CART DRAWER (shared on every page) ============ -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">Rs.0</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
