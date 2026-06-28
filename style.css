@@ -1,0 +1,1036 @@
+/* =====================================================================
+   MEDICARE+ ONLINE PHARMACY
+   Shared stylesheet used by home.html, medicines.html and Uploadrx.html
+   ===================================================================== */
+
+/* ---------- 1. Reset & base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #0a6e5e;
+  --color-primary-light: #00c896;
+  --color-bg: #f5fbfa;
+  --color-bg-light: #e0f7f2;
+  --color-text: #1f2d2a;
+  --color-text-muted: #4a5e5a;
+  --color-border: #d4ede8;
+  --color-white: #ffffff;
+  --color-rx: #e04848;
+  --color-generic: #7b1fa2;
+  --color-rating: #e8943a;
+  --radius: 10px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- 2. Top announcement banner ---------- */
+.top-banner {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.top-banner button {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* ---------- 3. Navbar ---------- */
+.navbar {
+  background-color: var(--color-white);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.logo span {
+  color: var(--color-primary-light);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+/* Highlights whichever page the visitor is currently on */
+.nav-links a.active {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-right a {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Cart icon button shown in the navbar on every page */
+.cart-btn {
+  position: relative;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--color-rx);
+  color: var(--color-white);
+  font-size: 11px;
+  font-weight: 600;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger menu button, only shown on small screens */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+/* ---------- 4. Page header (used by medicines.html / Uploadrx.html) ---------- */
+.page-header {
+  padding: 40px 5%;
+  text-align: center;
+  background-color: var(--color-bg-light);
+}
+
+.page-header h1 {
+  font-size: 30px;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 15px;
+  color: var(--color-text-muted);
+}
+
+/* ---------- 5. Hero (home page) ---------- */
+.hero {
+  padding: 60px 5%;
+  text-align: center;
+  background-color: var(--color-bg-light);
+}
+
+.hero h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+.hero p {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  margin: 5px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.hero-stats {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.hero-stats div {
+  text-align: center;
+}
+
+.hero-stats h3 {
+  color: var(--color-primary);
+  font-size: 24px;
+}
+
+.hero-stats p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ---------- 6. Trust bar ---------- */
+.trust-bar {
+  background-color: var(--color-white);
+  padding: 20px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.trust-bar p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ---------- 7. Generic section / title ---------- */
+.section {
+  padding: 50px 5%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.section-title p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.view-all-wrap {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.view-all-wrap a {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ---------- 8. Search box (medicines page) ---------- */
+.search-box {
+  background-color: var(--color-white);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.search-row input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.search-row button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-tags {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tag {
+  background-color: var(--color-bg-light);
+  color: var(--color-primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tag.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.no-results {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  padding: 30px 0;
+  display: none;
+}
+
+/* ---------- 9. Category cards ---------- */
+.category-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-card {
+  background-color: var(--color-white);
+  width: 150px;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.category-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0px 6px 14px rgba(10, 110, 94, 0.18);
+  transform: translateY(-4px);
+}
+
+.category-card h4 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: var(--color-text);
+}
+
+.category-card span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.category-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* ---------- 10. Product cards ---------- */
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: var(--color-white);
+  width: 230px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.product-img {
+  background-color: var(--color-bg-light);
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  position: relative;
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  color: var(--color-white);
+}
+
+.badge-rx { background-color: var(--color-rx); }
+.badge-otc { background-color: var(--color-primary); }
+.badge-generic { background-color: var(--color-generic); }
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.product-info .mfr {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 5px;
+}
+
+.product-info .rating {
+  font-size: 12px;
+  color: var(--color-rating);
+  margin-bottom: 10px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.add-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ---------- 11. Prescription upload section ---------- */
+.rx-section {
+  background-color: var(--color-white);
+  padding: 50px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.rx-text {
+  max-width: 450px;
+}
+
+.rx-text h2 {
+  color: var(--color-primary);
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.rx-step {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  align-items: flex-start;
+}
+
+.step-num {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.rx-step h4 {
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.rx-step p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.rx-form {
+  background-color: var(--color-bg);
+  padding: 25px;
+  border-radius: var(--radius);
+  width: 340px;
+  border: 1px solid var(--color-border);
+}
+
+.rx-form h3 {
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.form-group input.input-error {
+  border-color: var(--color-rx);
+}
+
+.field-error {
+  font-size: 11px;
+  color: var(--color-rx);
+  margin-top: 4px;
+  display: none;
+}
+
+.upload-box {
+  border: 2px dashed var(--color-border);
+  border-radius: 8px;
+  padding: 18px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.upload-box:hover {
+  border-color: var(--color-primary);
+}
+
+.upload-box.has-file {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-light);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Confirmation card shown after a successful prescription submission */
+.rx-success {
+  display: none;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.rx-success .success-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.rx-success h3 {
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.rx-success p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.rx-success .order-id {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* ---------- 12. Chronic disease packs ---------- */
+.pack-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pack-card {
+  background-color: var(--color-white);
+  width: 230px;
+  padding: 20px;
+  border-radius: var(--radius);
+  border-top: 5px solid var(--color-primary);
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pack-card h3 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.pack-card p {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.pack-items {
+  font-size: 13px;
+  color: var(--color-text);
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.pack-price {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 17px;
+}
+
+.pack-price span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+/* ---------- 13. Features ---------- */
+.feature-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: var(--color-white);
+  width: 260px;
+  padding: 25px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ---------- 14. Testimonials ---------- */
+.testimonial-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: var(--color-white);
+  width: 300px;
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+.testi-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.testi-header h4 {
+  font-size: 14px;
+}
+
+.testi-header span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.testi-stars {
+  color: var(--color-rating);
+  margin-bottom: 8px;
+}
+
+.testi-text {
+  font-size: 13px;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.verified {
+  font-size: 12px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ---------- 15. Footer ---------- */
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 40px 5% 20px;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-col h4 {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: var(--color-border);
+  font-size: 13px;
+}
+
+.footer-col ul li a:hover {
+  color: var(--color-white);
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: var(--color-border);
+  max-width: 280px;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #0d8c77;
+  padding-top: 15px;
+  font-size: 12px;
+  color: var(--color-border);
+}
+
+/* ---------- 16. Cart drawer ---------- */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+  z-index: 90;
+}
+
+.cart-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 360px;
+  max-width: 90vw;
+  background-color: var(--color-white);
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.15);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-drawer.open {
+  transform: translateX(0);
+}
+
+.cart-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cart-drawer-header h3 {
+  color: var(--color-primary);
+}
+
+.cart-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 20px;
+}
+
+.cart-empty-msg {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cart-item-info h5 {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.cart-item-info span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.cart-item-remove {
+  background: none;
+  border: none;
+  color: var(--color-rx);
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.cart-footer {
+  padding: 18px 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkout-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- 17. Toast notification ---------- */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background-color: var(--color-text);
+  color: var(--color-white);
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 13px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 200;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ---------- 18. Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    flex-direction: column;
+    padding: 15px 5%;
+    gap: 16px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-row {
+    flex-direction: column;
+  }
+
+  .cart-drawer {
+    width: 100%;
+  }
+}
